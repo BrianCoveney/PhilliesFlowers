@@ -13,9 +13,9 @@ public class Customer {
 	private String emailAddress;
 	private String comments;
 	private String address;
-	private int phoneNumber;
+	private String phoneNumber;
 	
-	public Customer(String name, String emailAddress, String comments, String address, int phoneNumber) {
+	public Customer(String name, String emailAddress, String comments, String address, String phoneNumber) {
 		this.name = name;
 		this.emailAddress = emailAddress;
 		this.comments = comments;
@@ -63,11 +63,11 @@ public class Customer {
 		this.address = address;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
