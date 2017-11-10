@@ -48,13 +48,13 @@ public class CustomerTest{
 	
 	@Test(expected= IllegalArgumentException.class)
 	public void testBuilderWithNullRequiredNameParam() {
-		Customer customerWithNullName = Customer.builder(id, null, emailAddress)
+		Customer.builder(id, null, emailAddress)
 				.build();
 	}
 	
 	@Test(expected= IllegalArgumentException.class)
 	public void testBuilderWithNullRequiredEmailAddressParam() {
-		Customer customerWithNullEmail = Customer.builder(id, name, null)
+		Customer.builder(id, name, null)
 				.build();
 	}
 
