@@ -15,12 +15,24 @@ public class DataLoader implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments arg0) throws Exception {
-		customerRepo.save(new Customer(1, "Brian Coveney", "brian@email.com", "I'd like flowers", "Cork", "0871124459"));
-		customerRepo.save(new Customer(2, "Peter Jones", "peter@email.com", "I'd like choclates", "Limerick", "0878122458"));
-		customerRepo.save(new Customer(3, "Jessica Foot", "jessica@email.com", "I'd like flowers", "Dublin", "0876152358"));
+
+		customerRepo.save(Customer.builder(1, "Brian Coveney", "brian@email.com")
+				.withComments("I'd like flowers")
+				.withAddress("Cork") 
+				.withPhoneNumber("0872254586")
+				.build());
 		
+		customerRepo.save(Customer.builder(2, "Peter Jones", "peter@email.com")
+				.withComments("I'd like choclates")
+				.withAddress("Limerick") 
+				.withPhoneNumber("0872212386")
+				.build());
+		
+		customerRepo.save(Customer.builder(3, "Jessica Footy", "jessica@email.com")
+				.withComments("I'd like flowers and choclates")
+				.withAddress("Dublin") 
+				.withPhoneNumber("0873456586")
+				.build());
 	}
 	
-	
-
 }
