@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Phillies Flowers Display All</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" type="text/css" media="all" href="../static/styles.css"
+th:href="@{/styles.css}" />
+</head>
+<body>
+	<h1>People in Database</h1>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Comments</th>
+			<th>Email Address</th>
+			<th>Address</th>
+			<th>Phone Number</th>
+		</tr>
+			<tr th:each="customer : ${customer}">
+			<td th:text="${customer.id}">ID</td>
+			<td th:text="${customer.name}">NAME</td>
+			<td th:text="${customer.emailAddress}">EMAIL ADDRESS</td>
+			<td th:text="${customer.comments}">COMMENTS</td>			
+			<td th:text="${customer.address}">ADDRESS</td>
+			<td th:text="${customer.phoneNumber}">PHONE NUMBER</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -15,9 +15,9 @@ public class DataLoader implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments arg0) throws Exception {
-		customerRepo.save(new Customer("Brian Coveney", "brian@email.com", "I'd like flowers", "Cork", "0871124459"));
-		customerRepo.save(new Customer("Peter Jones", "peter@email.com", "I'd like choclates", "Limerick", "0878122458"));
-		customerRepo.save(new Customer("Jessica Foot", "jessica@email.com", "I'd like flowers", "Dublin", "0876152358"));
+		customerRepo.save(new Customer(1, "Brian Coveney", "brian@email.com", "I'd like flowers", "Cork", "0871124459"));
+		customerRepo.save(new Customer(2, "Peter Jones", "peter@email.com", "I'd like choclates", "Limerick", "0878122458"));
+		customerRepo.save(new Customer(3, "Jessica Foot", "jessica@email.com", "I'd like flowers", "Dublin", "0876152358"));
 		
 	}
 	

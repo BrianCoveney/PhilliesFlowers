@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Phillies Flowers One Customer Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" type="text/css" media="all" href="../static/styles.css"
+th:href="@{/styles.css}" />
+</head>
+<body>
+	<h1 th:text="${customer.id}">Customer's ID</h1>
+	<h1 th:text="${customer.name}">Customer's Name</h1>
+	<h1 th:text="${customer.emailAddress}">Customer's Email</h1>
+	<h1 th:text="${customer.comments}">Customer's Comments</h1>
+	<h1 th:text="${customer.address}">Customer's Address</h1>
+	<h1 th:text="${customer.phoneNumber}">Customer's Phone Number</h1>
+</body>
+</html>
