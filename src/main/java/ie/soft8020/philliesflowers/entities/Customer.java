@@ -1,6 +1,7 @@
 package ie.soft8020.philliesflowers.entities;
 
 
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -99,6 +100,10 @@ public class Customer {
 		private final Customer customer;
 		
 		public Builder(int id, String name, String emailAddress) { 
+			
+			if(name == null || emailAddress == null) 
+				throw new IllegalArgumentException(Const.StatusCodes.NULL_PARAMETER);
+			
 			customer = new Customer();
 			customer.id = id;
 			customer.name = name;
