@@ -15,19 +15,19 @@ public class Customer {
 	int id;
 	private String name;
 	private String emailAddress;
-	
+
 	// Optional fields
 	private String comments;
 	private String address;
 	private String phoneNumber;
-	
-	private Customer() {
+
+	Customer() {
 		comments = Const.ParamsNames.CUSTOMER_COMMENTS;
 		address = Const.ParamsNames.CUSTOMER_ADDRESS;
 		phoneNumber = Const.ParamsNames.CUSTOMER_PHONE_NUMBER;
 	}
-	
-	
+
+
 	/**
      * Creates a new Customer with default values for optional fields.
      *
@@ -95,46 +95,46 @@ public class Customer {
 		return "Customer [id=" + id + ", name=" + name + ", emailAddress=" + emailAddress + ", comments=" + comments
 				+ ", address=" + address + ", phoneNumber=" + phoneNumber + "]";
 	}
-	
+
 	public static class Builder {
 		private final Customer customer;
-		
-		public Builder(int id, String name, String emailAddress) { 
-			
-			if(name == null || emailAddress == null) 
+
+		public Builder(int id, String name, String emailAddress) {
+
+			if(name == null || emailAddress == null)
 				throw new IllegalArgumentException(Const.StatusCodes.NULL_PARAMETER);
-			
+
 			customer = new Customer();
 			customer.id = id;
 			customer.name = name;
 			customer.emailAddress = emailAddress;
 		}
-		
+
 		public Builder withComments(String comments) {
 			if(comments != null) {
 				customer.comments = comments;
 			}
 			return this;
 		}
-		
+
 		public Builder withAddress(String address) {
 			if(address != null) {
 				customer.address = address;
 			}
 			return this;
 		}
-		
+
 		public Builder withPhoneNumber(String phoneNumber) {
 			if(phoneNumber != null) {
 				customer.phoneNumber = phoneNumber;
 			}
 			return this;
 		}
-		
+
 		public Customer build() {
 			return customer;
 		}
-		
+
 	}
-	
+
 }
