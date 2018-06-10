@@ -57,16 +57,15 @@ public class DataLoaderTest {
 
     @Test
     public void testFindOne() {
+
         int id = 103;
-        String name = "Moe";
-        String email= "moe@email.com";
-        customerRepo.save(Customer.builder(id, name, email).withComments("Hello").build());
+        customerRepo.save(Customer.builder(id, name, emailAddress).withComments("Hello").build());
 
         Customer customerSaved = customerRepo.findOne(id);
 
         assertThat(id, is(customerSaved.getId()));
         assertThat(name, is(customerSaved.getName()));
-        assertThat(email, is(customerSaved.getEmailAddress()));
+        assertThat(emailAddress, is(customerSaved.getEmailAddress()));
 
         customerRepo.delete(id);
     }

@@ -1,12 +1,74 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Phillies Flowers Home Page</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" type="text/css" media="all" href="../static/styles.css"
-th:href="@{/styles.css}" />
+  <title>Phillies Flowers Home Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" media="all" href="../static/styles.css"
+        th:href="@{/styles.css}" />
 </head>
 <body>
-<p>Welcome to my Phillies Flowers</p>
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html" class="page_link">Home</a>
+      </li>
+      <li>
+        <a href="#" class="page_link">Somewhere</a>
+      </li>
+      <li>
+        <a href="#" class="page_link">Somewhere else</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <article>
+    <p>Florist choice</p>
+    <div class="florist_choice valentines">
+      <a href="">
+        <span>Valentine’s Package</span>
+      </a>
+    </div>
+    <div class="florist_choice christmas">
+      <a href="">
+        <span>Christmas Package</span>
+      </a>
+    </div>
+    <div class="florist_choice birthday">
+      <a href="">
+        <span>Birthday Package</span>
+      </a>
+    </div>
+  </article>
+  <aside>
+    <p>Custom gift packages</p>
+    <div class="custom_packages_container">
+      <div class="custom_packages">
+        <form class="form" action="/action_page.php" method="get">
+          <fieldset class="fs_flowers">
+            <legend>Flowers:</legend>
+            <label><input type="checkbox" name="rose" value="Rose"/>Rose</label>
+            <label><input type="checkbox" name="germini" value="Germini"/>Germini</label>
+            <label><input type="checkbox" name="lilly" value="Lilly"/>Lilly</label>
+            <label><input type="checkbox" name="lisianthus" value="Lisianthus"/>Lisianthus</label>
+            <label><input type="checkbox" name="carnation" value="Carnation"/>Carnation</label>
+          </fieldset>
+          <fieldset class="fs_extras">
+            <legend>Extras:</legend>
+            <label><input type="checkbox" name="chocolates" value="Chocolates"/>Chocolates</label>
+            <label><input type="checkbox" name="balloons" value="Balloons"/>Balloons</label>
+            <label><input type="checkbox" name="teddy" value="Teddy"/>Teddy</label>
+          </fieldset>
+          <button class="fm_buttons" type="submit" value="Submit">Submit</button>
+          <button class="fm_buttons" type="reset" value="Reset">Reset</button>
+        </form>
+      </div>
+    </div>
+  </aside>
+</main>
+<footer>
+  <p>Copyright ©2017, Phillie’s Flowers</p>
+</footer>
 </body>
 </html>
